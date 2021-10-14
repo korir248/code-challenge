@@ -4,27 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOD FUN</title>
+    <title>Sweet Dreams</title>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div> <h2 class="title">Sweet Dreams</h2></div>
-    <span>
+
+    <div>
         <nav><ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Cart</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#contact">Contact</a></li>
             <li><a href="#">About</a></li>
+            <li class="title">Sweet Dreams</li>
         </ul></nav>
     </span>
-    <!-- <div class="item">
-        <img src="" >
-        <div>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur fugiat similique ab nemo magnam, libero placeat laudantium sed esse quas, maiores exercitationem dolorum modi tenetur expedita fugit? Hic, tenetur numquam.</p>
+    
+    </div>
+    <div class="review">
+        <div class="review__items item1" >
+            <h1>Bed 1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, quia. Natus cupiditate officiis eveniet minus ea numquam veniam eius doloribus iste, sed ad quo? Voluptates libero ipsum inventore aperiam recusandae?
+            </p>
+            
         </div>
-    </div> -->
+      
+        <div class="review__items item2">
+            <h1>Bed 2</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis aliquid corporis atque soluta! Dolor, quisquam delectus, quis, ipsum facere soluta omnis id ab quo in tenetur alias eaque labore est.
+            </p>
+            <!-- <img src="./resources/Anime Original 3840 x 2160 (2).png"> -->
+        </div>
+      
+        <div class="review__items item3"><h1>Bed 3</h1>
+      
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem officia tenetur debitis mollitia rerum perferendis, laboriosam reprehenderit cupiditate inventore provident vero minus asperiores eaque hic. Vel repellendus voluptatibus quaerat porro!
+            </p>
+        </div>
+      
+        <div class="review__button">
+            <button id="prev" onclick="previousReview()">
+                PREV
+            </button>
+              
+            <button id="next" onclick="nextReview()">
+                NEXT
+            </button>
+        </div>
+    </div>
+    <div id="items">
+
+    </div>
     
-    
+    <script src="./index.js"></script>
 </body>
 </html>
