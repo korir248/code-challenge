@@ -1,11 +1,6 @@
 
 let rev = 0;
 carousel(rev);
-  
-// function previousReview() {
-//     rev = rev - 1;
-//     carousel(rev);
-// }
 
 let previousReview = () => {
     rev = rev - 1;
@@ -13,14 +8,12 @@ let previousReview = () => {
 
 }
   
-function nextReview() {
+let nextReview=() => {
     rev = rev + 1;
     carousel(rev);
 }
-
-// let carousel= (review) =>
   
-function carousel(review) {
+let carousel=(review) =>{
     let reviews = document.getElementsByClassName("review__items");
   
     if (review >= reviews.length) {
@@ -43,35 +36,35 @@ const show = document.getElementById('show');
 let beds = [
     {
         id:1,
-        image:'./resources/',
+        // image:'./resources/',
         price: 200,
         name:'queen',
         description:'5 by 6'
     },
     {
         id:2,
-        image:'bed1.jpg',
+        // image:'bed1.jpg',
         price: 300,
         name:'king',
         description:'3 by 6'
     },
     {
         id:3,
-        image:'bed1.jpg',
+        // image:'bed1.jpg',
         price: 400,
         name:'king',
         description:'2 by 6'
     },
     {
         id:4,
-        image:'bed1.jpg',
+        // image:'bed1.jpg',
         price: 500,
         name:'queen',
         description:'3 by 6'
     },
     {
         id:5,
-        image:'bed1.jpg',
+        // image:'bed1.jpg',
         price: 600,
         name:'king',
         description:'4 by 6'
@@ -82,7 +75,7 @@ function createItem(beds) {
     beds.map(bed => {
         
         let singleItem = document.createElement("div");
-        let bedImage = document.createElement('img');
+        // let bedImage = document.createElement('img');
         let price = document.createElement("h4");
         let name = document.createElement("h5");
         let description = document.createElement('p');
@@ -98,7 +91,7 @@ function createItem(beds) {
         bedImage.src = bed.image;
         btn.innerHTML = 'add to cart';
 
-        singleItem.appendChild(bedImage);
+        // singleItem.appendChild(bedImage);
         singleItem.appendChild(price);
         singleItem.appendChild(name);
         singleItem.appendChild(description);
@@ -113,3 +106,4 @@ items.addEventListener('click', function () {
     console.log('joan');
 });
 createItem(beds);
+items.addEventListener
