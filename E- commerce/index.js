@@ -1,30 +1,5 @@
-// const addToCartBtn1 = document.getElementById('button1');
-// const addToCartBtn2 = document.getElementById('button2');
-// const addToCartBtn3 = document.getElementById('button3');
-// const addToCartBtn4 = document.getElementById('button4');
-// const addToCartBtn5 = document.getElementById('button5');
-// const addToCartBtn6 = document.getElementById('button6');
-
-// addToCartBtn1.addEventListener("click",()=>{
-//     console.log("Added 1 to cart")
-// })
-// addToCartBtn2.addEventListener("click",()=>{
-//     console.log("Added 2 to cart")
-// })
-// addToCartBtn3.addEventListener("click",()=>{
-//     console.log("Added 3 to cart")
-// })
-// addToCartBtn4.addEventListener("click",()=>{
-//     console.log("Added 4 to cart")
-// })
-// addToCartBtn5.addEventListener("click",()=>{
-//     console.log("Added 5 to cart")
-// })
-// addToCartBtn6.addEventListener("click",()=>{
-//     console.log("Added 6 to cart")
-// })
-
-let beds = [{
+const myCart= []
+const beds = [{
     id: 1,
     image: "./resources/bed1.jpg",
     description: "King Size",
@@ -63,17 +38,69 @@ const showBeds= () => {
     let myBedsDiv = document.querySelector('.beds')
     let single= ''
     for (let i = 0; i < beds.length; i++) {
-        console.log(beds[i].id)
+        // console.log(beds[i].id)
         singleBed= beds[i]
         single += '<div class="my-beds">' +
                         '<img src="' +singleBed.image+'">'+
                         '<h4>' +singleBed.description +'</h4>'+
                         '<h4>' +singleBed.price + '</h4>'+
-                        '<button onClick=addToCart('+ singleBed.id+')>'+"Add to cart" +'</button>'+
+                        '<button  onclick="addToCart(' + singleBed.id + ')">Add to cart</button>'+
                      '</div>'
 
     }
     myBedsDiv.innerHTML= single
+
     
 }
 showBeds()
+
+const addToCart =(id)=>{
+    let cart= document.querySelector('.cart')
+    let cartItem = cart.innerHTML
+    
+    let count = 1
+    for (let i = 0; i < beds.length; i++){
+        if (id==beds[i].id) {
+
+            let currentBed= {
+                ...beds[i]
+            }
+
+            cartItem += '<tr>'+
+                        '<td>'+beds[i].description+'</td>'+
+                        '<td>'+beds[i].price+ '</td>'+
+                        '<td><button>-</button>'+count+'<button onClick="increasecount('+ count+')">+</button></td>'+
+                        '<td>'+(count * beds[i].price)+'</td>'+
+                        '<td></td>'+
+                        '<td> <button  onclick="deleteFromCart(' + beds[i].id + ')">delete</button> </td>'+
+                        '</tr>'
+
+            // myCart.push(currentBed)
+            for (let i = 0; i < myCart.length; i++) {
+                if (myCart[i] === myCart[i+1]) {
+                    myCart.splice(i,1)
+                    
+                }
+                
+            }
+            console.log(myCart)
+            
+            
+        }
+    }
+    cart.innerHTML= cartItem
+
+}
+addToCart()
+const deleteFromCart =(id)=>{
+    if (cart[i].id == id) {
+        cart.pop
+        
+    }
+}
+const decreasecount=(count)=>{
+    return count -= 1
+}
+const increasecount= (count)=>{
+    return count+=1
+}
