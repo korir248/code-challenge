@@ -14,7 +14,7 @@ li a {
     margin: 15px;
   }
 li a:hover {
-    background-color: turquoise;
+    background-color: rgb(41, 49, 48);
 }
 .title{
     display: block;
@@ -37,37 +37,57 @@ h1 {
     color: aliceblue;
 
 }
-.singleItem {
-    border: 1px solid black;
-    padding: 20px;
-    margin: 5px;
-    margin-top: 30px;
-    width: 500px;
-  }
+nav{
+  background-color: rgb(216, 126, 23);
+}
+
 
 .items>div{
       border: 2px;
       max-width: 400px;
-      /* max-width:max-content; */
-         
+      /* max-width:max-content; */    
       
+}
+.items{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:center;
   }
-
-.beds{
-      display: block;
-      
-      align-content: center;
-  }
-  .my-beds{
+.my-beds{
     max-width: 100px;
     margin: 30px;
     border: 2px;
     box-shadow: inset;
-  }
+}
 .t-head> td{
     width: 50px;
 
 }
+.my-carousel{
+  max-width: 100%;
+  align-content: center;
+  margin: 30px;
+  max-height: 4000px;
+}
+.card-image{
+  width: 300px;
+  height: 250px;
+}
+.carousel-image{
+  max-width: 100%;
+  height: 900px;
+}
+.card{
+  box-shadow: 0 4px 8px 4px rgba(0,0,0,0.2);
+  margin: 10px;
+  text-align: center;
+}
+.addToCart-btn{
+  margin: 5px;
+}
+
+/* Cart */
+
 
 
   
